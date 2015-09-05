@@ -3,7 +3,7 @@
 ################################
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/dchoi/.oh-my-zsh
+# export ZSH=/Users/dchoi/.oh-my-zsh # set to correct directory
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -143,10 +143,9 @@ alias serve="python -m SimpleHTTPServer"
 ## User Settings (functions)
 ################################
 
-function @google {
+function @google() {
   open "https://google.com/search?q=$*"
 }
 function @java-use() { # use as "@java-use 8"
   export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
 }
-
