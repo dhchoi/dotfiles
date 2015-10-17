@@ -1,0 +1,10 @@
+### Temporary Files
+*~
+
+### OS Generated Files
+.DS_Store
+Thumbs.db
+
+### IDE Generated Files (JetBrains)
+*.iml
+.idea/

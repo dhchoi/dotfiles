@@ -1,0 +1,8 @@
+[user]
+	name = Andy Choi
+	email = andy.dh.choi@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = auto
