@@ -60,6 +60,8 @@ plugins=(git terminalapp sublime python pip osx npm node last-working-dir jsonto
 # User Settings (miscellaneous)
 ################################
 
+source $ZSH/oh-my-zsh.sh
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -76,41 +78,29 @@ plugins=(git terminalapp sublime python pip osx npm node last-working-dir jsonto
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-source $ZSH/oh-my-zsh.sh
-
 # Added to increase user limit of file descriptors
 ulimit -n 4096
+
+# Set python pip to run only if there is an activated virtualenv
+export PIP_REQUIRE_VIRTUALENV=true
 
 
 ################################
 # User Settings (paths)
 ################################
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# Set /usr/local/bin before /usr/bin (system-provided programs) for homebrew
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# Added to add path to node/npm
-#export PATH="/Users/dchoi/.nvm/v0.10.38/bin:$PATH"
-# OR
-#export NVM_DIR="/Users/dchoi/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Added for setting local modules as priority
 export PATH="node_modules/.bin:$PATH"
 
-# As of go 1.2, a valid GOPATH is required to use the `go get` command
-# You may wish to add the GOROOT-based install location to your PATH:
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
 
 # Added to include Android SDK
 #export PATH="/Users/dhchoi/Library/Android/sdk/platform-tools:$PATH"
-
-# Set /usr/local/bin before /usr/bin(system-provided programs) for homebrew
-#homebrew=/usr/local/bin:/usr/local/sbin:/usr/bin
-#export PATH=$homebrew:$PATH
 
 
 ################################
@@ -148,4 +138,7 @@ function @google() {
 }
 function @java-use() { # use as "@java-use 8"
   export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
+}
+function @global-pip() { # use for managing pip globally
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
