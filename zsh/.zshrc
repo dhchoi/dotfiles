@@ -124,8 +124,8 @@ alias mongod_start="mongod --config /usr/local/etc/mongod.conf"
 alias psql_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias psql_stop="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
 alias finder_open="open -a Finder ./"
-alias finder_hidden_show="defaults write com.apple.finder ShowAllFiles TRUE"
-alias finder_hidden_hide="defaults write com.apple.finder ShowAllFiles FALSE"
+alias finder_hidden_show="defaults write com.apple.finder AppleShowAllFiles YES" # OS X 10.11
+alias finder_hidden_hide="defaults write com.apple.finder AppleShowAllFiles NO" # OS X 10.11
 alias serve="python -m SimpleHTTPServer"
 
 
