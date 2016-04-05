@@ -22,7 +22,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 echo "Cloning bundles..."
 while IFS='' read -r line || [[ -n "$line" ]]; do
   echo "${line}..."
-  git clone ${line} ~/.vim/bundle/
+  cd ~/vim/bundle/ && git clone ${line}
 done < "./vim/bundles"
 
 echo "Finished."
