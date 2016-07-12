@@ -31,7 +31,7 @@ ZSH_THEME="ys"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -82,26 +82,27 @@ source $ZSH/oh-my-zsh.sh
 ulimit -n 4096
 
 # Set python pip to run only if there is an activated virtualenv
-export PIP_REQUIRE_VIRTUALENV=true
+# export PIP_REQUIRE_VIRTUALENV=true
 
 
 ################################
 # User Settings (paths)
 ################################
 
+# export MANPATH="/usr/local/man:$MANPATH"
+
 # Set /usr/local/bin before /usr/bin (system-provided programs) for homebrew
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # Added for setting local modules as priority
 export PATH="node_modules/.bin:$PATH"
 
-### Added by the Heroku Toolbelt
-#export PATH="/usr/local/heroku/bin:$PATH"
-
 # Added to include Android SDK
-#export PATH="/Users/dhchoi/Library/Android/sdk/platform-tools:$PATH"
+# export PATH="/Users/dhchoi/Library/Android/sdk/platform-tools:$PATH"
 
+# Loads nvm
+# export NVM_DIR="/Users/achoi/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 ################################
 # User Settings (aliases)
@@ -116,17 +117,10 @@ export PATH="node_modules/.bin:$PATH"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias goto_node="cd /Users/dhchoi/Documents/WorkspaceNode"
-alias goto_web="cd /Users/dhchoi/Documents/WorkspaceWeb"
-alias profile_reload=". ~/.bash_profile"
-alias profile_edit="vim ~/.bash_profile"
-alias mongod_start="mongod --config /usr/local/etc/mongod.conf"
-alias psql_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias psql_stop="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"
 alias finder_open="open -a Finder ./"
 alias finder_hidden_show="defaults write com.apple.finder AppleShowAllFiles YES" # OS X 10.11
 alias finder_hidden_hide="defaults write com.apple.finder AppleShowAllFiles NO" # OS X 10.11
-alias serve="python -m SimpleHTTPServer"
+alias servelocal="python -m SimpleHTTPServer"
 
 
 ################################
