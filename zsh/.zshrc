@@ -3,7 +3,7 @@
 ################################
 
 # Path to your oh-my-zsh installation.
-# export ZSH=/Users/dchoi/.oh-my-zsh # set to correct directory
+export ZSH=/Users/dchoi/.oh-my-zsh  # SET TO CORRECT DIR!!
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -98,11 +98,12 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export PATH="node_modules/.bin:$PATH"
 
 # Added to include Android SDK
-# export PATH="/Users/dhchoi/Library/Android/sdk/platform-tools:$PATH"
+# export PATH="/Users/dhchoi/Library/Android/sdk/platform-tools:$PATH" # SET TO CORRECT DIR!!
 
 # Loads nvm
-# export NVM_DIR="/Users/achoi/.nvm"
+# export NVM_DIR="/Users/dhchoi/.nvm" # SET TO CORRECT DIR!!
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 
 ################################
 # User Settings (aliases)
