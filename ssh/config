@@ -1,4 +1,6 @@
-host *
-   ServerAliveInterval 180
-   ServerAliveCountMax 3
-
+Host *
+  ServerAliveInterval 180
+  ServerAliveCountMax 3
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
