@@ -2,11 +2,11 @@
 
 ### shell files
 echo "Copying shell configs..."
-cp ./zsh/* ~/
+cp ./zsh/.* ~/
 
 ### git files
 echo "Copying git configs..."
-cp ./git/* ~/
+cp ./git/.* ~/
 
 ### ssh files
 echo "Copying ssh configs..."
@@ -22,8 +22,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 echo "Cloning bundles..."
 while IFS='' read -r line || [[ -n "$line" ]]; do
   echo "${line}..."
-  cd ~/vim/bundle/ && git clone ${line}
+  cd ~/.vim/bundle/ && git clone ${line}
 done < "./vim/bundles"
 
 echo "Finished."
-
