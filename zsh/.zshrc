@@ -3,7 +3,7 @@
 ################################
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/dchoi/.oh-my-zsh  # SET TO CORRECT DIR!!
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git terminalapp sublime python pip osx npm node last-working-dir jsontools history coffee brew battery)
+plugins=(git terminalapp sublime python pip osx npm node last-working-dir jsontools history battery)
 
 
 ################################
@@ -75,9 +75,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # Added to increase user limit of file descriptors
 ulimit -n 4096
 
@@ -98,10 +95,10 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export PATH="node_modules/.bin:$PATH"
 
 # Added to include Android SDK
-# export PATH="/Users/dhchoi/Library/Android/sdk/platform-tools:$PATH" # SET TO CORRECT DIR!!
+# export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # Loads nvm
-# export NVM_DIR="/Users/dhchoi/.nvm" # SET TO CORRECT DIR!!
+# export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 
@@ -119,8 +116,8 @@ export PATH="node_modules/.bin:$PATH"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias finder_open="open -a Finder ./"
-alias finder_hidden_show="defaults write com.apple.finder AppleShowAllFiles YES" # OS X 10.11
-alias finder_hidden_hide="defaults write com.apple.finder AppleShowAllFiles NO" # OS X 10.11
+alias finder_hidden_show="defaults write com.apple.finder AppleShowAllFiles YES" # >= OS X 10.11
+alias finder_hidden_hide="defaults write com.apple.finder AppleShowAllFiles NO" # >= OS X 10.11
 alias servelocal="python -m SimpleHTTPServer"
 
 
