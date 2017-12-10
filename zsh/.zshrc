@@ -53,7 +53,20 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git terminalapp sublime python pip osx npm node last-working-dir jsontools history battery)
+plugins=(
+  git
+  terminalapp
+  sublime
+  python
+  pip
+  osx
+  npm
+  node
+  last-working-dir
+  jsontools
+  history
+  battery
+)
 
 
 ################################
@@ -88,8 +101,8 @@ ulimit -n 4096
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Set /usr/local/bin before /usr/bin (system-provided programs) for homebrew
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+# Set /usr/local/bin before /usr/bin (system-provided programs) for homebrew and previous bash
+export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
 # Added for setting local modules as priority
 export PATH="node_modules/.bin:$PATH"
