@@ -55,7 +55,6 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  terminalapp
   sublime
   python
   pip
@@ -119,8 +118,6 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH=“$PATH:$HOME/.rvm/bin”
-export LDFLAGS=“-L/usr/local/opt/openssl/lib”
-export CPPFLAGS=“-I/usr/local/opt/openssl/include”
 
 
 ################################
