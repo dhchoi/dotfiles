@@ -107,12 +107,20 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/s
 # Added for setting local modules as priority
 export PATH="node_modules/.bin:$PATH"
 
+# Use Python from Homebrew as default
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # Added to include Android SDK
 # export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # Loads nvm
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH=“$PATH:$HOME/.rvm/bin”
+export LDFLAGS=“-L/usr/local/opt/openssl/lib”
+export CPPFLAGS=“-I/usr/local/opt/openssl/include”
 
 
 ################################
